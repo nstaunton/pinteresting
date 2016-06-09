@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+$font-family-sans-serif:				'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:									45px;
+$navbar-default-bg:							white;
+$navbar-default-brand-color: 		#27ae60;
+$body-bg: 											#bdc3c7;
+
+$brand-success:									#27ae60;
+$btn-success-color: 						white;
+$btn-default-color: 						#27ae60;
+$btn-default-border:						#27ae60;
+$btn-primary-color: 						white;
+$navbar-default-bg:							white;
+$jumbotron-bg: 									white;
+
+@import 'bootstrap';
+
+.center {
+	text-align: center;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
