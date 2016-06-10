@@ -19,10 +19,12 @@
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About Us", about_path %></li>
       <li><%= link_to "Mission", mission_path %></li>
-      <li><p><div class="centered"><a class="btn btn-default btn-sm" href="#" role="button" color="green" margin=:"10px">Log in</a></div></p></li>
+    <% if user_signed_in? %>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+    <li><p><div class="centered"><a class="btn btn-default btn-sm" href="#" role="button" color="green" margin=:"10px">Log in</a></div></p></li>
       <li role="separator" class="divider"></li>
-      <li><p><div class="centered"><a class="btn btn-success btn-sm" href="#" role="button" color="green">Sign up</a></div></p></li>
-      <li role="separator" class="divider"></li>
+    <% end %>
       </ul>
       </ul>
   </div><!-- /.navbar-collapse -->
