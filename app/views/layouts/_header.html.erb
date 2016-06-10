@@ -20,9 +20,10 @@
       <li><%= link_to "About Us", about_path %></li>
       <li><%= link_to "Mission", mission_path %></li>
     <% if user_signed_in? %>
+      <li><%= link_to "Account Settings", edit_user_registration_path %></li>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
     <% else %>
-    <li><p><div class="centered"><a class="btn btn-default btn-sm" href="#" role="button" color="green" margin=:"10px">Log in</a></div></p></li>
+    <li><p><div class="centered"><a class="btn btn-default btn-sm" href="/users/sign_in" role="button" color="green" margin=:"10px">Log in</a></div></p></li>
       <li role="separator" class="divider"></li>
     <% end %>
       </ul>
