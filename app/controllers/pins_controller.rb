@@ -4,7 +4,8 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @pins = Pin.all
+    #ASC for ascending "first created first" or DESC "last created first"
+    @pins = Pin.all.order("created_at ASC").paginate(:page => params[:page], :per_page => 12)
   end
 
   def show
