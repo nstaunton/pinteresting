@@ -2,13 +2,8 @@
   <h1>Welcome to HelpingPaws!</h1>
   <br>
   <p>We are an organization committed to the protection of animals - providing <i><b>foster to forever home services</i></b> in the Greater Seattle Area. Sign up to learn more about our animal <b>foster care program</b>, <b>forever home rescue options</b>, and <b>animal sponsorship</b> opportunies.</p>
-  
-  <% if user_signed_in? %>
-  	# do something
-  <% else %>
   <p>
        <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
   </p>
-  <% end %>
 </div>
